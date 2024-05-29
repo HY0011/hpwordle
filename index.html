@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Wordle -Happy playing with wordle</title>
+    <meta name="description" content="Happy Wordle is a wordle game that is played with a different word each day.">
+    <meta name="keywords" content="Happy Wordle,Wordle,Wordle Game,Wordle Game">
+    <meta name="author" content="Ethan">
+    <link rel="stylesheet" href="./CSS/css.css">
+    <link rel="icon" type="image/png"
+    href="images/hp.png" sizes="16x16">
+
+
+</head>
+<body>
+    <header>
+    <h1 class="logo">Happy Wordle</h1>
+    <button class="menu">&#9776;</button>
+    <div class="support">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#e06f28', 'Q5Q3XWEN3');kofiwidget2.draw();</script> 
+    </div>
+    <nav>
+        <ul>
+            <li><a class="curr" href="./">HOME</a></li>
+            <li><a href="./news.html">NEWS</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    
+    <main>
+        <section class="present">
+            <div>
+                <p>
+                    Happy Wordle is a wordle game that is played with a different word each day. 
+                    The goal is to guess the word in 6 tries. After each guess, the color of the tiles will change to show how close your guess was to the word.
+                </p>
+            </div>
+        </section>
+        <section class="game">
+            <div id="game"></div> <!-- Container for the game grid -->
+        </section>
+        <section class="keyboard">
+            <div id="keyboard"><!-- On-screen keyboard --></div> 
+            </div> 
+        </section>
+        <section class="setting_newgame">
+            <button id="customWordleBtn">Create Custom Wordle to share with friends</button>
+            <div id="customWordForm" style="display: none;">
+                <input type="text" id="wordInput" placeholder="Enter your word here">
+                <button onclick="submitCustomWord()">Submit</button>
+            </div>
+            <div id="linkModal" style="display:none;">
+                <div id="modalContent">
+                <p id="shareLinkText">Here is your shareable link:</p>
+                <input type="text" id="shareLinkInput" readonly>
+                <button onclick="copyToClipboard()">Copy to Clipboard</button>
+                <button onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+
+        </section>
+    </main>
+    
+    
+    <footer>
+        <p>Copyright ©2024 Happy Wordle. All rights reserved.</p>
+        <p>--------------------------------------------------------------------</p>
+        <p>happywordle.com is not affiliated with "Wordle" by NYTimes in any way</p>
+    </footer>
+    <div style="display:none;">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WNGHJ8DGM"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-3WNGHJ8DGM');
+    </script>
+    <script src="./JS/wordWorker.js"></script>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/customWord.js"></script>
+</body>
+</html>

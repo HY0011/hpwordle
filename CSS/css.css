@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+header,footer {
+    background-color: bisque; 
+    border: 5px solid bisque;
+    padding: 45px;
+}
+section{
+    background-color: bisque; 
+    border: 5px solid bisque;
+    padding: 15px;
+}
+section.keyboard{
+    background-color: bisque; 
+    border: 5px solid bisque;
+    padding: 5px;
+}
+.present{
+    background-color: bisque; 
+    border: 5px solid bisque;
+    padding: 10px;
+    text-align:center;
+}
+nav {
+    background-color: bisque; 
+    border: 5px solid bisque;
+    padding: 20px;
+}
+h1 {
+    text-align:center;
+    position: absolute;
+    top: 15px;
+    line-height: 80px;
+    background-image: url(../images/logo192.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    text-indent: -9999px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.support a {
+    font-family: "Times New Roman";
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-color: #ffa55b;
+    color: #525251;
+    
+}
+
+.support a:hover {
+    background-color:rgb(247, 170, 77); 
+}
+
+
+
+nav a {
+    display: block;
+    float: left;
+    height: 34px;
+    line-height: 32px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 0 10px;
+    background-color: bisque;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #333;
+}
+nav a.curr {
+    color:rgb(255, 140, 0);
+    font-weight: bold;
+}
+nav  a:hover {
+    background-color: #ebb58a;
+}
+
+nav  li {
+    display: inline;
+    padding: 10px;
+    margin-right: 4vw;
+}
+nav  ul {
+    position: absolute;
+    right: 5vw;
+    top: 100px;
+    line-height: 100px;
+
+}
+footer {
+    text-align: center;
+    bottom: 0px;
+}
+.menu {
+    display: none;
+}
+section.setting_newgame {
+    text-align:center
+}
+#game {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr); 
+    grid-template-columns: repeat(5, 55px); 
+    gap: 5px;
+    justify-content: center;
+    
+
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 2px solid #5a4b35;
+    font-size: 24px;
+    margin: 8px;
+}
+
+button {
+    background-color: rgb(255, 140, 0);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color:  rgb(255, 254, 253); 
+    color:  rgb(255, 140, 0);
+    border:1px solid rgb(255, 140, 0);
+}
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border-radius: 10px; 
+}
+
+.key-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.key {
+    padding: 10px;
+    margin: 0 2px;
+    background-color: #e3e7e9;
+    border: 1px solid #ccc;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-grow: 0.05;
+    border-radius: 5px;
+}
+
+.key.special {
+    border-radius: 5px; 
+}
+
+
+.key:hover {
+    background-color: #f1f1f1;
+}    
+#customWordForm {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#wordInput {
+    margin-right: 10px;
+}
+
+#linkModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* Responsive Design Syntax */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .menu {
+        display: block;
+        background-color: rgb(250, 209, 158);
+        color: rgb(122, 120, 120);
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    h1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
